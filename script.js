@@ -1,4 +1,5 @@
 // Kelvin Weather - With our knowledge of JavaScript, let’s convert Kelvin to Celsius, then to Fahrenheit.
+
 const kelvin = 0;
 const celsius = kelvin - 273;
 let fahrenheit = celsius * (9/5) + 32;
@@ -10,7 +11,8 @@ console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`);
 console.log(`The temperature is ${newton} degrees Newton.`);
 
 
-//Dog Years
+//Dog Years - Here’s how you convert your age from “human years” to “dog years”: The first two years of a dog’s life count as 10.5 dog years each. Each year following equates to 4 dog years.
+
 let myAge = 26;
 let earlyYears = 2;
 earlyYears *= 10.5;
