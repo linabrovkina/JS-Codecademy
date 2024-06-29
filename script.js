@@ -106,3 +106,74 @@ if(age > 18 && registeredEarly) {
 } else {
   console.log('Please see the registration desk.');
 }
+
+// Rock, Paper, Scissors
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+
+  if(userInput === 'rock'|| userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
+    return userInput;
+  } else {
+    console.log('Error! Please type rock, paper or scissors.');
+  }
+};
+
+function getComputerChoice(){
+  let randomNumber = Math.floor(Math.random() * 3);
+  switch(randomNumber) {
+    case 0:
+      return 'rock';
+      break;
+    case 1:
+      return 'paper';
+      break;
+    case 2:
+      return 'scissors';
+      break;
+  }
+}
+
+function determineWinner(userChoice, computerChoice){
+  if(userChoice === computerChoice){
+    return "It's tie";
+  }
+
+  if(userChoice === 'rock'){
+    if(computerChoice === 'paper'){
+      return 'Computer won.';
+    } else {
+      return 'User won.';
+    }
+  }
+
+  if(userChoice === 'paper'){
+    if(computerChoice === 'scissors'){
+      return 'Computer won.';
+    } else {
+      return 'You won.';
+    }
+  }
+
+  if(userChoice === 'scissors'){
+    if(computerChoice === 'rock'){
+      return 'Computer won.';
+    } else {
+      return 'You won.';
+    }
+  }
+  
+  if(userChoice === 'bomb'){
+    return 'Congratulations, you won';
+  }
+}
+
+function playGame(){
+  let userChoice = getUserChoice('bomb');
+  let computerChoice = getComputerChoice();
+  console.log('You choose: ' + userChoice);
+  console.log('Computer choose: ' + computerChoice);
+
+  console.log(determineWinner(userChoice, computerChoice))
+}
+
+playGame();
