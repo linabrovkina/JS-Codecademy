@@ -84,4 +84,25 @@ switch(randomNumber) {
     case 7:
       eightBall = 'Signs point to yes';
       break;
-  }
+}
+
+// Race Day - You have been hired to write a program that will register runners for the race and give them instructions on race day.
+
+let raceNumber = Math.floor(Math.random() * 1000);
+
+let registeredEarly = true;
+let age = 25;
+
+if(age > 18 && registeredEarly){
+  raceNumber += 1;
+}
+
+if(age > 18 && registeredEarly) {
+  console.log(`You will race at 9:30 am. Your race number is: ${raceNumber}.`);
+} else if (age > 18 && !registeredEarly) {
+  console.log(`You will race at 11:00 am. Your race number is: ${raceNumber}.`);
+} else if (age < 18) {
+  console.log(`You will race at 12:30pm. Your race number is: ${raceNumber}.`)
+} else {
+  console.log('Please see the registration desk.');
+}
